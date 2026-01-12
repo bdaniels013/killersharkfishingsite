@@ -3,7 +3,7 @@ export const siteContent = {
     name: "Killer Shark Fishing",
     captain: "Captain Chris",
     phone: "228-596-0472",
-    email: "bookings@killersharkfishing.com", // Placeholder
+    email: "killersharkfishing@gmail.com",
     address: "Gulfport Harbor, Gulfport, MS",
     location: {
       lat: 30.3674, // Approximate coordinates for Gulfport Harbor

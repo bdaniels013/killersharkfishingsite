@@ -13,10 +13,10 @@ import { cn } from "@/lib/utils";
 const navItems = [
   { name: "Home", href: "/" },
   { name: "Trips", href: "/trips" },
-  { name: "Marine Services", href: "/services" },
   { name: "Gallery", href: "/gallery" },
   { name: "About", href: "/about" },
   { name: "FAQ", href: "/faq" },
+  { name: "Marine Services", href: "/services" },
   { name: "Contact", href: "/contact" },
 ];
 
@@ -61,8 +61,9 @@ export function Header() {
               key={item.href}
               href={item.href}
               className={cn(
-                "text-sm font-medium transition-colors hover:text-primary-foreground/80 uppercase tracking-wide",
-                pathname === item.href ? "text-primary-foreground" : "text-muted-foreground"
+                "text-sm font-medium transition-colors uppercase tracking-wide active:text-blue-400",
+                scrolled ? "hover:text-foreground" : "hover:text-white",
+                pathname === item.href ? (scrolled ? "text-blue-400" : "text-white") : scrolled ? "text-muted-foreground" : "text-white/80"
               )}
             >
               {item.name}
@@ -103,8 +104,9 @@ export function Header() {
                     href={item.href}
                     onClick={() => setIsOpen(false)}
                     className={cn(
-                      "text-lg font-medium transition-colors hover:text-primary uppercase tracking-wide",
-                      pathname === item.href ? "text-primary" : "text-muted-foreground"
+                      "text-lg font-medium transition-colors uppercase tracking-wide active:text-blue-400",
+                      "hover:text-blue-400",
+                      pathname === item.href ? "text-blue-400" : "text-foreground/80"
                     )}
                   >
                     {item.name}

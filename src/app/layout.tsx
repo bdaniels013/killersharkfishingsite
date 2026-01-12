@@ -17,6 +17,10 @@ export const metadata: Metadata = {
     template: `%s | ${siteContent.business.name}`,
   },
   description: siteContent.seo.defaultDescription,
+  icons: {
+    icon: [{ url: "/icon.png" }],
+    apple: [{ url: "/apple-touch-icon.png" }],
+  },
   openGraph: {
     title: siteContent.seo.defaultTitle,
     description: siteContent.seo.defaultDescription,
@@ -25,9 +29,9 @@ export const metadata: Metadata = {
     type: "website",
     images: [
       {
-        url: siteContent.branding.logo.src,
-        width: siteContent.branding.logo.width,
-        height: siteContent.branding.logo.height,
+        url: "/icon.png",
+        width: 512,
+        height: 512,
         alt: siteContent.branding.logo.alt,
       },
     ],
@@ -36,7 +40,7 @@ export const metadata: Metadata = {
     card: "summary_large_image",
     title: siteContent.seo.defaultTitle,
     description: siteContent.seo.defaultDescription,
-    images: [siteContent.branding.logo.src],
+    images: ["/icon.png"],
   },
 };
 
